@@ -30,4 +30,5 @@ URL: https://subugoe.github.io/metar
 BugReports: https://github.com/subugoe/metaR/issues
 RoxygenNote: 7.0.2
 Imports: 
-    usethis (>= 1.5.1)
+    usethis (>= 1.5.1),
+    tibble (>= 2.1.3)
