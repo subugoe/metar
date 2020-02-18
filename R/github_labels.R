@@ -14,7 +14,7 @@
 #' }
 use_wag_labels <- function() {
   usethis::use_github_labels(
-    labels = wag_labels$name,
+    labels = wag_labels()$name,
     colours = wag_label_colours,
     descriptions = wag_label_descriptions,
     delete_default = FALSE
@@ -26,8 +26,8 @@ use_wag_labels <- function() {
 wag_labels <- function() {
   tibble::tribble(
     ~name, ~colour, ~description,
-    "needs-votes :thumbsup: ", "bfe9fc", "Is this worthwhile?",
-    "placeholder :arrow_up: ", "cfffb2", "Work lives in another org."
+    "needs-votes :thumbsup: ", "bfe9fc", "Please upvote, if this is worthwhile",
+    "placeholder :arrow_up: ", "cfffb2", "Work lives in another org"
   )
 }
 

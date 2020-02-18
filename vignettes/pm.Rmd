@@ -1,0 +1,177 @@
+---
+title: "Project Management"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Project Management}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = FALSE
+)
+```
+
+```{r setup}
+library(metaR)
+```
+
+GitHub, though primarily a code repository, also has some lightweight project management features.
+
+This document includes some opinionated suggestions for using GitHub as our project management tool.
+
+The project management on GitHub has some advantages, that may lend itself well to our remote and asynchronous work.
+It encourages you to think of a project in small chunks, each of which can (or could) be definitively completed.
+
+But project management often degenerates into unproductive "work about work", so skepticism is in order.
+**You should never feel obligated to use a tool that does not help you.**
+These suggestions are thus merely [focal points](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) for *how* to use GitHub together, *if* you find it useful.
+You can also use it partially, or only passively.
+
+
+## Getting Started
+
+To get started right away:
+
+1. Get an account on GitHub.com.
+   Choose a username that is easy to type and to remember for your teammates.
+   Assume that the username is public to the world.
+   [Customize your notifications](https://help.github.com/en/github/receiving-notifications-about-activity-on-github/choosing-the-delivery-method-for-your-notifications).
+   By default, you would get *a lot* of emails.
+2. Join our [subugoe](https://github.com/subugoe) organisation on GitHub, by giving your username to one of your teammates or email it to `held@sub.uni-goettingen.de`.
+3. You're good to go! You can browse the public SUB repos and their issue trackers at https://github.com/subugoe/ or start dive right into one project, such as https://github.com/subugoe/hybrid_oa_dashboard/issues.
+
+
+## Documentation
+
+GitHub has extensive documentation about its project management features in different formats:
+
+- [issues guides](https://guides.github.com/features/issues/) (10 mins)
+- [issues help](https://help.github.com/en/github/managing-your-work-on-github/managing-your-work-with-issues) (more extensive)
+
+You can learn how to write **GitHub-Flavored Markdown (GFM)**, the (*very* simple) markup language for GitHub issues here:
+
+- [gfm guide](https://guides.github.com/features/mastering-markdown/) (3 mins)
+- [gfm help](https://help.github.com/en/github/writing-on-github)
+
+The rest of this document lays out some conventions of how we might be using GitHub project management.
+
+
+## Organisations and Teams
+
+GitHub knows individual and organisation accounts.
+Our organisation is https://github.com/subugoe, which we share with everyone using GitHub at SUB. 
+
+Inside the org account, there are (nested) teams.
+Teams make it easier to `@`-mention or manage privileges for a group of people at the same time.
+Relevant for us are:
+
+- https://github.com/orgs/subugoe/teams/wag for the entire [Abteilung Wissen als Gemeingut](https://www.sub.uni-goettingen.de/kontakt/abteilungen-a-z/abteilungs-und-gruppendetails/abteilunggruppe/wissen-als-gemeingut/)
+  - https://github.com/orgs/subugoe/teams/hybrid inside it for the [Hybrid Open Access Dashboards Projekt](https://www.sub.uni-goettingen.de/projekte-forschung/projektdetails/projekt/hybrid-oa-dashboards/)
+
+On the team pages, you can find related repositories, project boards (more on that below) and a discussion page (which we're probably not using).
+
+You can always add more (nested) teams, or add repos to existing teams.
+
+Learn more about organisations and teams [here](https://help.github.com/en/enterprise/2.19/admin/user-management/organizations-and-teams).
+
+
+## Issues
+
+Project management on GitHub is organised around **"issues"** (otherwise known as "tickets").
+Issues are relatively small chunks of work, ideas or problems, such as "add user login".
+
+Issues always belong to *repos* (short for repositories) which is where a particular piece of software is developed.
+In our case, some project or publication may reside in a repository, or more.
+You can also use GitHub issues on [GitHub.com](https://github.com) without ever touching the code in the repos.
+Issues should always be opened in the most appropriate repo, though they can also easily be [moved](https://help.github.com/en/github/managing-your-work-on-github/transferring-an-issue-to-another-repository).
+
+- Issues are **closeable**.
+    They should be formulated in such a way that they can either be deemed completed, or rejected, in which case they can be marked as closed.
+    Less goal-oriented communication and unclear deliverables are discouraged by the format.
+- Issues are **cheap**.
+    Issues can easily be created, closed, re-opened, moved etc.
+    If in doubt, you can create an issue, as long as it is closeable.
+- Issues can be **open to everyone**, so even people outside the organisation can participate.
+- **You need not read every, or even most issues**.
+    The assumption is that, if something is important, you will be asked to look at it, or find it yourself.
+- **Not every, or even most issues need to be closed**.
+    Time is finite, but happily, issue backlogs are not.
+    Adding an issue can be a good way to get an idea out of your mind that you may or may not ever get around to.
+- Issues are **asynchronous**.
+    You can react to an issue when it fits your priorities.
+    If something needs urgent attention, you can `@-`mention another username or team.
+- Issues are quite **powerful**.
+    They can be linked, tagged, assigned to milestones or people.
+
+Here are some more suggestions for [how to write good issues](https://wiredcraft.com/blog/how-we-write-our-github-issues/).
+
+
+### Special Labels
+
+In addition to the default GitHub issue labels, we can use these (they'll look prettier on GitHub.com):
+
+```{r}
+knitr::kable(wag_labels())
+```
+
+You can set these up in your own repo by once running `use_wag_labels()`.
+
+`needs-votes` is intended to gauge interest / worthiness of an idea *before* committing a lot of time to build it out. 
+If you have such an idea, just add the `needs-votes` label.
+You can see all current issues tagged `needs-votes` with the search query `label:needs-votes org:subugoe` using GitHub's [advanced search](https://help.github.com/en/github/searching-for-information-on-github/about-searching-on-github).
+You can also get an overview over all issues at https://github.com/issues.
+If you like an idea, react to it using one of the reaction emojis or comment on it.
+We may also discuss these in person during weeklies or other meetings.
+
+`placeholder` is for work, which happens in, and is tracked in repositories outside of the `subugoe` org, such as an ropensci package.
+You might still want to track that work in a placeholder issue.
+
+To add more special labels, request it in an issue to this package or create a pull request. 
+
+
+### Special Repos
+
+Issues should usually go inside the repo to which they pertain, and from which they can (or could) be closed.
+
+There are two exceptions to this rule for issues without a clear place.
+
+- https://github.com/subugoe/metaR also accepts issues around improving *how we work*.
+    For example, an idea to enhance the reproducibility of reports may go here.
+    These issues may be "closeable" right within {metaR} by adopting some best practice, or they might require some work in another package or even a new package.
+- https://github.com/subugoe/scholcomm_analytics also accepts issues around *what we might work substantively*.
+    For example, an idea for a new analysis can be logged here, though it may be done in its own repo, if commited to.
+    There is not a really good reason to log these plans in the blog repo, except that this seems to be the going conventions.
+    Arguably, new project ideas belong on this landing page, because if completed, the whole project would be listed here.
+
+
+### Milestones
+
+If you want to, you can also go all-in and enter project timetables and deliverables to GitHub with all the bells and whistles, as I have here done for the [hybrid open access dashboard project](https://github.com/subugoe/hybrid_oa_dashboard).
+
+
+## Projects
+
+GitHub also offers Kanban-style boards, which are confusingly known as "projects".
+
+Projects are a *view* on existing issues.
+
+Counter to the issues themselves, projects can span issues from *several* repositories, though not from different orgs.
+
+Projects can be a good way to:
+
+- narrow down your focus to a few current issues that are being worked on now
+- get a more satisfying card-based UI
+- organise several issues across different repos that are all related to some bigger goal.
+
+Projects are also "automated"; the issue cards move around automatically based on their status.
+
+There is so far only one project for us: https://github.com/orgs/subugoe/projects/2
+The goal is to give everyone (if they want to know) some idea of what everyone else (if they want to share) is working on.
+
+You can learn about them here:
+
+- [project (aka board) help](https://help.github.com/en/github/managing-your-work-on-github/about-project-boards)
