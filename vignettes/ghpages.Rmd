@@ -1,0 +1,65 @@
+---
+title: "GitHub Pages"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{GitHub Pages}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(metaR)
+library(magrittr)
+```
+
+[GitHub Pages](https://pages.github.com) lets you serve static websites (HTML5, CSS, JS) right from GitHub.
+That can be convenient to publish research results or documentation.
+
+You just need to push your assets to a branch named `gh-pages` or a `docs/` folder on `master`.
+The website for, say, project `foo` is then available to the world at `https://subugoe.github.io/foo`.
+
+
+## Existing GitHub Pages
+
+To potentially transition to a custom domain (see [#4](https://github.com/subugoe/metaR/issues/4)), we first need to know who would be affected by such a change.
+(Notice though, that all old URLs would be forwarded automatically, so this is just out of an abundance of caution.)
+Here are all repos who currently have a GitHub Page (as defined a `200` status return).
+For each of those repos, 
+
+```{r}
+repos <- gh::gh(
+  endpoint = "GET /users/:username/repos", 
+  username = "subugoe", 
+  .limit = Inf
+) %>% 
+  purrr::map_dfr(
+    .f = function(x) {
+      name <- x$name
+      response <- httr::GET(url = paste0("https://subugoe.github.io/", name))
+      tibble::tibble(
+        name = name,
+        status = httr::status_code(x = response),
+        has_ghpages = status == 200
+      )
+    },
+    .id = NULL
+  )
+repos %>% 
+  dplyr::filter(has_ghpages == TRUE) %>% 
+  knitr::kable()
+
+# can't get collaborators via API b/c that would require push access to all repos
+# gh::gh("GET /repos/:owner/:repo/collaborators", owner = "subugoe", repo = "2019-11-12-ugoe-carpentries", .limit = Inf)
+# committers are possible, but are a bad source, b/c they include lots of outside contributors
+# gh::gh("GET /repos/:owner/:repo/commits", owner = "subugoe", repo = "2019-11-12-ugoe-carpentries", .limit = Inf)
+```
+
