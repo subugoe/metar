@@ -24,7 +24,7 @@ It provides:
 You can install the released version of {metaR} from [GitHub](https://github.com/maxheld83/passhelpr) with:
 
 ``` r
-remotes::install_github("subuegoe/metaR")
+remotes::install_github("subugoe/metaR")
 ```
 
 This package will never go to CRAN.
