@@ -33,7 +33,7 @@ Suggests:
     dplyr (>= 0.8.4),
     purrr (>= 0.3.3),
     magrittr (>= 1.5)
-URL: https://subugoe.github.io/metar
+URL: https://subugoe.github.io/metaR
 BugReports: https://github.com/subugoe/metaR/issues
 RoxygenNote: 7.0.2
 Imports: 
