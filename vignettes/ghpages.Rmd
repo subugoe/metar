@@ -1,12 +1,6 @@
 ---
 title: "GitHub Pages"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{GitHub Pages}
-  %\VignetteEncoding{UTF-8}
-  %\VignetteEngine{knitr::rmarkdown}
-editor_options: 
-  chunk_output_type: console
+output: bookdown::html_document2
 ---
 
 ```{r, include = FALSE}

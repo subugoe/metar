@@ -1,10 +1,6 @@
 ---
 title: "Project Management"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Project Management}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: bookdown::html_document2
 ---
 
 ```{r, include = FALSE}

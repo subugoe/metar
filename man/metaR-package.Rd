@@ -11,7 +11,7 @@ Best practices, settings and templates for #rstats work at SUB.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://subugoe.github.io/metar}
+  \item \url{https://github.com/subugoe/metaR}
   \item Report bugs at \url{https://github.com/subugoe/metaR/issues}
 }
 
