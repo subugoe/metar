@@ -1,9 +1,7 @@
 ^metaR\.Rproj$
 ^\.Rproj\.user$
-^LICENSE\.md$
 ^codecov\.yml$
 ^\.github/workflows/main\.yaml$
-^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
 ^\.github/workflows/pkgdown\.yaml$
