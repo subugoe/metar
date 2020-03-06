@@ -5,7 +5,7 @@ authors:
     href: https://www.maxheld.de
   Göttingen State and University Library:
     href: https://www.sub.uni-goettingen.de/
-    html: <img src="reference/figures/sub_wordmark.jpg" height="15" />
+    html: <img src="https://subugoe.github.io/metaR/reference/figures/sub_wordmark.jpg" height="15" />
 template:
   params:
     bootswatch: cosmo
