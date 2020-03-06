@@ -9,3 +9,6 @@ authors:
 template:
   params:
     bootswatch: cosmo
+navbar:
+  type: inverse
+# css is adapted from cosmo bootswatch 3.4.1 and colors are added via https://www.bootstrap-live-customizer.com
