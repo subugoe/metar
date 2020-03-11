@@ -10,7 +10,7 @@ create_package2(name, fields = NULL)
 create_package2_sub(name)
 }
 \arguments{
-\item{name}{\code{character[1]} giving the package name and path}
+\item{name}{\verb{[character(1)]} giving the package name and path}
 
 \item{fields}{A named list of fields to add to \code{DESCRIPTION}, potentially
 overriding default values. See \code{\link[usethis:use_description]{use_description()}} for how you can set
