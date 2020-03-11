@@ -1,7 +1,7 @@
 #' Set up package
 #'
 #' @inherit usethis::create_package
-#' @param name `character[1]` giving the package name and path
+#' @param name `[character(1)]` giving the package name and path
 #' @inheritParams usethis::use_github
 #' @export
 create_package2 <- function(name, fields = NULL) {
@@ -15,7 +15,7 @@ create_package2 <- function(name, fields = NULL) {
     )
   )
   setwd(name)
-  usethis::ui_todo(x = "Edit the `DESCRIPTION`.")
+  usethis::ui_todo(x = "Edit the {usethis::ui_code('DESCRIPTION')}.")
   usethis::edit_file("DESCRIPTION")
 
   use_pkgdown2()
@@ -26,7 +26,7 @@ create_package2 <- function(name, fields = NULL) {
   usethis::use_roxygen_md()
 
   usethis::use_readme_md()
-  usethis::ui_todo(x = "Edit the `README.md`.")
+  usethis::ui_todo(x = "Edit the {usethis::ui_code('README.md')}.")
   usethis::edit_file("README.md")
 }
 
@@ -41,13 +41,16 @@ create_package2_sub <- function(name) {
     )
   )
   usethis::use_mit_license(name = "Goettingen State and University Library")
+  use_pkgdown2()
   usethis::use_git()
   usethis::use_github(
     protocol = "https",
     organisation = "subugoe"
   )
   use_github_actions2()
-  usethis::use_coverage(type = "codecov")
+  reposlug <- paste("subugoe", name, sep = "/")
+  use_codecov2(reposlug = reposlug)
+  use_ghpages(name = name)
 }
 
 #' Set up pkgdown
@@ -62,6 +65,7 @@ use_pkgdown2 <- function(config_file = "pkgdown/_pkgdown.yml") {
     type = "Suggests",
     min_version = TRUE
   )
+  usethis::use_git_ignore(ignores = "docs/")
 }
 
 #' Set up github actions
@@ -76,3 +80,29 @@ use_github_actions2 <- function() {
   usethis::use_github_actions()
 }
 
+#' Set up codecov
+#' @param reposlug `[character(1)]` giving the `username/repo` URL slug of the project.
+#' @export
+use_codecov2 <- function(reposlug) {
+  usethis::use_coverage(type = "codecov")
+  usethis::ui_todo(
+    "Add the {usethis::ui_value('Repository Upload Token')} from codecov as a secret called {usethis::ui_value('CODECOV_TOKEN')} on GitHub."
+  )
+  view_url("https://codecov.io/gh", reposlug, "settings")
+  view_url("https://github.com", reposlug, "settings", "secrets")
+}
+
+#' Set up GitHub Pages
+#' @inheritParams create_package2
+#' @export
+use_ghpages <- function(name) {
+  usethis::ui_todo(
+    "Add a Personal Access Token from GitHub as secret called {usethis::ui_value('GH_PAT_GHPAGES')} on GitHub."
+  )
+  name <- "shinySurvey"
+  usethis::browse_github_pat(
+    scopes = "public_repo",
+    description = paste("GitHub actions:", name)
+  )
+  usethis::browse_github_secrets(package = name)
+}

@@ -2,7 +2,10 @@
 
 export(create_package2)
 export(create_package2_sub)
+export(use_codecov2)
+export(use_ghpages)
 export(use_github_actions2)
 export(use_pkgdown2)
 export(use_wag_labels)
+export(view_url)
 export(wag_labels)
