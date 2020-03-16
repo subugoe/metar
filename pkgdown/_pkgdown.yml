@@ -9,6 +9,9 @@ authors:
 template:
   params:
     bootswatch: cosmo
+    docsearch:
+      api_key: ff1d71c7f0b22f4faf044c83aac493c2
+      index_name: metar
 navbar:
   type: inverse
 # css is adapted from cosmo bootswatch 3.4.1 and colors are added via https://www.bootstrap-live-customizer.com
