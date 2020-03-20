@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 library(metaR)
 ```
 
+
 GitHub, though primarily a code repository, also has some lightweight project management features.
 
 This document includes some opinionated suggestions for using GitHub as our project management tool.
@@ -26,6 +27,16 @@ But project management often degenerates into unproductive "work about work", so
 **You should never feel obligated to use a tool that does not help you.**
 These suggestions are thus merely [focal points](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) for *how* to use GitHub together, *if* you find it useful.
 You can also use it partially, or only passively.
+
+
+## Webinar
+
+We held a related webinar on 2020-03-06.
+
+You can find the recorded version at:
+
+- `\\ug-sub-fs02.sub.uni-goettingen.de\share\metaR` (requires [VPN access](https://intranet.sub.uni-goettingen.de/pages/viewpage.action?pageId=118144269))
+- `owncloud.gwdg.de\metaR` (requires owncloud access)
 
 
 ## Getting Started
