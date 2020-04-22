@@ -3,6 +3,7 @@
 export(create_package2)
 export(create_package2_sub)
 export(ejd_pal)
+export(ugoe_pal)
 export(use_codecov2)
 export(use_ghpages)
 export(use_github_actions2)

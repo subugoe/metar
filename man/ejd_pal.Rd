@@ -7,11 +7,11 @@
 ejd_pal()
 }
 \value{
-A tibble with three colums, all as character strings:
+A tibble with three colums, all as character vectors of hex color values:
 \enumerate{
 \item \code{name} (not a "real" color name),
-\item the hex code of the \code{dark} variant and
-\item the hex code of the \code{light} variant.
+\item the \code{dark} variant and
+\item the \code{light} variant.
 }
 }
 \description{
@@ -21,7 +21,11 @@ Color pallete by \href{https://twitter.com/emilyjanedennis}{Dr. Emily Jane Denni
 Should be color blind friendly
 }
 \examples{
-scales::show_col(ejd_pal()$dark)
+purrr::walk(.x = ejd_pal()[-1], .f = scales::show_col)
 
+}
+\seealso{
+Other corporate identity: 
+\code{\link{ugoe_pal}()}
 }
 \concept{corporate identity}
