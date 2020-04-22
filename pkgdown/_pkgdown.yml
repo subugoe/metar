@@ -1,5 +1,8 @@
 destination: docs
-url: https://subugoe.github.io/metaR
+repo:
+  url:
+    home: https://github.com/subugoe/metaR/
+    issue: https://github.com/subugoe/metaR/issues/
 authors:
   Maximilian Held:
     href: https://www.maxheld.de
