@@ -15,6 +15,19 @@ template:
     docsearch:
       api_key: ff1d71c7f0b22f4faf044c83aac493c2
       index_name: metar
+reference:
+- title: Project Management
+  desc: Functions to set up GitHub for project management
+- contents:
+  - has_concept("project management")
+- title: Setup helpers
+  desc: Functions to set up (package) development
+- contents:
+  - has_concept("setup helpers")
+- title: Corporate Identity
+  desc: Functions for the SUB corporate identity
+- contents:
+  - has_concept("corporate identity")
 navbar:
   type: inverse
 # css is adapted from cosmo bootswatch 3.4.1 and colors are added via https://www.bootstrap-live-customizer.com

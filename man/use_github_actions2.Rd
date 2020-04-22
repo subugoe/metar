@@ -9,3 +9,11 @@ use_github_actions2()
 \description{
 Set up github actions
 }
+\seealso{
+Other setup helpers: 
+\code{\link{create_package2}()},
+\code{\link{use_codecov2}()},
+\code{\link{use_ghpages}()},
+\code{\link{use_pkgdown2}()}
+}
+\concept{setup helpers}

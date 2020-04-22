@@ -24,3 +24,4 @@ Should be color blind friendly
 scales::show_col(ejd_pal()$dark)
 
 }
+\concept{corporate identity}

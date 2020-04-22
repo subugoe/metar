@@ -29,5 +29,10 @@ keys and updating your \code{.travis.yml}.
 }
 }
 \seealso{
-\url{https://pkgdown.r-lib.org/articles/pkgdown.html#configuration}
+Other setup helpers: 
+\code{\link{create_package2}()},
+\code{\link{use_codecov2}()},
+\code{\link{use_ghpages}()},
+\code{\link{use_github_actions2}()}
 }
+\concept{setup helpers}

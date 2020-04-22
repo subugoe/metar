@@ -4,7 +4,7 @@
 #'
 #' @param ... Elements of the URL
 #' @param open `[logical(1)]` giving whether the URL should be opened
-#'
+#' @keywords internal
 #' @export
 view_url <- function(..., open = interactive()) {
   url <- paste(..., sep = "/")

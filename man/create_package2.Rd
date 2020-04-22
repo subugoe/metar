@@ -30,3 +30,17 @@ project
 Both functions can be called on an existing project; you will be asked
 before any existing files are changed.
 }
+\seealso{
+Other setup helpers: 
+\code{\link{use_codecov2}()},
+\code{\link{use_ghpages}()},
+\code{\link{use_github_actions2}()},
+\code{\link{use_pkgdown2}()}
+
+Other setup helpers: 
+\code{\link{use_codecov2}()},
+\code{\link{use_ghpages}()},
+\code{\link{use_github_actions2}()},
+\code{\link{use_pkgdown2}()}
+}
+\concept{setup helpers}

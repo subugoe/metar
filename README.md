@@ -5,7 +5,7 @@
 [![Codecov test coverage](https://codecov.io/gh/subugoe/metaR/branch/master/graph/badge.svg)](https://codecov.io/gh//subugoe/metaR?branch=master)
 <!-- badges: end -->
 
-This package is for internal at [SUB Göttingen](http://sub.uni-goettingen.de).
+This package is for internal use at [SUB Göttingen](http://sub.uni-goettingen.de).
 It is about how we work.
 
 <div class="alert alert-info">

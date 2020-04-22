@@ -2,6 +2,7 @@
 #'
 #' Wraps to [usethis::use_github_labels()] to add WAG default labels to GitHub defaults.
 #'
+#' @family project management
 #' @export
 #'
 #' @examples
@@ -22,6 +23,7 @@ use_wag_labels <- function() {
 }
 
 #' @rdname use_wag_labels
+#' @family project management
 #' @export
 wag_labels <- function() {
   tibble::tribble(

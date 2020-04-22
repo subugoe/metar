@@ -15,6 +15,7 @@
 #' 2. the hex code of the `dark` variant and
 #' 3. the hex code of the `light` variant.
 #'
+#' @family corporate identity
 #' @export
 ejd_pal <- function() {
   tibble::tribble(

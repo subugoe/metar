@@ -3,6 +3,7 @@
 #' @inherit usethis::create_package
 #' @param name `[character(1)]` giving the package name and path
 #' @inheritParams usethis::use_github
+#' @family setup helpers
 #' @export
 create_package2 <- function(name, fields = NULL) {
   usethis::create_package(
@@ -31,6 +32,7 @@ create_package2 <- function(name, fields = NULL) {
 }
 
 #' @rdname create_package2
+#' @family setup helpers
 #' @export
 create_package2_sub <- function(name) {
   create_package2(
@@ -56,6 +58,7 @@ create_package2_sub <- function(name) {
 #' Set up pkgdown
 #'
 #' @inherit usethis::use_pkgdown
+#' @family setup helpers
 #' @export
 use_pkgdown2 <- function(config_file = "pkgdown/_pkgdown.yml") {
   fs::dir_create("pkgdown")
@@ -69,6 +72,7 @@ use_pkgdown2 <- function(config_file = "pkgdown/_pkgdown.yml") {
 }
 
 #' Set up github actions
+#' @family setup helpers
 #' @export
 use_github_actions2 <- function() {
   # used in below github actions
@@ -82,6 +86,7 @@ use_github_actions2 <- function() {
 
 #' Set up codecov
 #' @param reposlug `[character(1)]` giving the `username/repo` URL slug of the project.
+#' @family setup helpers
 #' @export
 use_codecov2 <- function(reposlug) {
   usethis::use_coverage(type = "codecov")
@@ -94,6 +99,7 @@ use_codecov2 <- function(reposlug) {
 
 #' Set up GitHub Pages
 #' @inheritParams create_package2
+#' @family setup helpers
 #' @export
 use_ghpages <- function(name) {
   usethis::ui_todo(
