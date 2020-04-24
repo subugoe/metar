@@ -23,6 +23,7 @@ purrr::walk(.x = ugoe_pal(), .f = scales::show_col)
 }
 \seealso{
 Other corporate identity: 
-\code{\link{ejd_pal}()}
+\code{\link{ejd_pal}()},
+\code{\link{subugoe_template}}
 }
 \concept{corporate identity}

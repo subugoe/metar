@@ -1,4 +1,3 @@
-destination: docs
 repo:
   url:
     home: https://github.com/subugoe/metaR/
@@ -8,10 +7,9 @@ authors:
     href: https://www.maxheld.de
   Göttingen State and University Library:
     href: https://www.sub.uni-goettingen.de/
-    html: <img src="https://subugoe.github.io/metaR/reference/figures/sub_wordmark.jpg" height="15" />
 template:
+  package: metaR
   params:
-    bootswatch: cosmo
     docsearch:
       api_key: ff1d71c7f0b22f4faf044c83aac493c2
       index_name: metar
@@ -28,6 +26,3 @@ reference:
   desc: Functions for the SUB corporate identity
 - contents:
   - has_concept("corporate identity")
-navbar:
-  type: inverse
-# css is adapted from cosmo bootswatch 3.4.1 and colors are added via https://www.bootstrap-live-customizer.com
