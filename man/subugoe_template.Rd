@@ -4,7 +4,7 @@
 \alias{subugoe_template}
 \title{State- and University Library of Göttingen \href{http://pkgdown.r-lib.org}{pkgdown} template}
 \description{
-This function does nothing, it just for documentation.
+State- and University Library of Göttingen \href{http://pkgdown.r-lib.org}{pkgdown} template
 }
 \details{
 To use this template for website, list {metaR} in your \code{DESCRIPTION} and add to your \verb{_pkgdown.yml}:\if{html}{\out{<div class="yaml">}}\preformatted{template:

@@ -110,5 +110,5 @@ use_ghpages <- function(name) {
     scopes = "public_repo",
     description = paste("GitHub actions:", name)
   )
-  usethis::browse_github_secrets(package = name)
+  usethis::browse_github(package = name)
 }

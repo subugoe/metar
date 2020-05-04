@@ -27,8 +27,8 @@ These functions create an R project:
 project
 }
 
-Both functions can be called on an existing project; you will be asked
-before any existing files are changed.
+Both functions can be called on an existing project; you will be asked before
+any existing files are changed.
 }
 \seealso{
 Other setup helpers: 

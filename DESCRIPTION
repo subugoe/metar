@@ -35,13 +35,11 @@ Suggests:
     purrr (>= 0.3.4),
     magrittr (>= 1.5),
     bookdown (>= 0.17),
-    scales (>= 1.1.0)
+    scales (>= 1.1.0),
+    roxygen2 (>= 7.1.0)
 URL: https://subugoe.github.io/metaR, https://github.com/subugoe/metaR
 BugReports: https://github.com/subugoe/metaR/issues
 RoxygenNote: 7.1.0
 Imports: 
     usethis (>= 1.5.1),
     tibble (>= 2.1.3)
-Remotes: 
-    r-lib/usethis@e47424bc233b56ffd37a2e9a629300cd46daa6bc,
-    maxheld83/usethis@gh-secrets
