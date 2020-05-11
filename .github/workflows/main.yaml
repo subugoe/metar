@@ -12,10 +12,10 @@ jobs:
       # this freezes the package versions
       RSPM: "https://packagemanager.rstudio.com/all/__linux__/bionic/279"
       # unfortunately this has to be updated by hand
-      LIB_PATH: "/opt/R/3.6.3/lib/R/library"
+      LIB_PATH: "/usr/local/lib/R/site-library"
     container:
       # this freezes the r version
-      image: "rstudio/r-base:3.6.3-bionic"
+      image: "rocker/rstudio:3.6.3-ubuntu18.04"
     steps:
       - uses: actions/checkout@v2
       - name: Query dependencies

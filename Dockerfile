@@ -1,10 +1,10 @@
 # below block needs to be the same as in .github/workflows/main.yaml
 # this freezes the r version
-FROM rstudio/r-base:3.6.3-bionic
+FROM rocker/rstudio:3.6.3-ubuntu18.04
 # this freezes the package versions
 ENV RSPM="https://packagemanager.rstudio.com/all/__linux__/bionic/279"
 # unfortunately this has to be updated by hand
-ENV LIB_PATH="/opt/R/3.6.3/lib/R/library"
+ENV LIB_PATH="/usr/local/lib/R/site-library"
 
 LABEL "name"="metaR"
 LABEL "maintainer"="Maximilian Held <info@maxheld.de>"
