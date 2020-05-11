@@ -1,7 +1,7 @@
 # metaR
 
 <!-- badges: start -->
-[![R build status](https://github.com/subugoe/metaR/workflows/CICD/badge.svg)](https://github.com//subugoe/metaR/actions)
+[![R build status](https://github.com/subugoe/metaR/workflows/main.yaml/badge.svg)](https://github.com//subugoe/metaR/actions)
 [![Codecov test coverage](https://codecov.io/gh/subugoe/metaR/branch/master/graph/badge.svg)](https://codecov.io/gh//subugoe/metaR?branch=master)
 <!-- badges: end -->
 
