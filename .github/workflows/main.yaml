@@ -56,6 +56,10 @@ jobs:
       - name: Copy dependencies to working directory
         run: |
           cp --recursive --force ${{ env.LIB_PATH }}/* .deps/
+      - name: Build Package Website
+        run: |
+          pkgdown::build_site(override = list(new_process = FALSE))
+        shell: Rscript {0}
       - name: Build and push docker image
         uses: docker/build-push-action@v1
         with:
@@ -67,10 +71,6 @@ jobs:
           add_git_labels: true
           tags: ${{ github.sha }}
           push: ${{ github.event_name != 'pull_request' }}
-      - name: Build Package Website
-        run: |
-          pkgdown::build_site(override = list(new_process = FALSE))
-        shell: Rscript {0}
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/master'
         uses: maxheld83/ghpages@v0.2.0
