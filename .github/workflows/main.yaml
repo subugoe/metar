@@ -28,8 +28,8 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ${{ env.LIB_PATH }}
-          key: ${{ env.RSPM }}-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ env.RSPM }}-
+          key: ${{ env.RSPM }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ env.RSPM }}-1-
       - name: Install System dependencies
         env:
           RHUB_PLATFORM: linux-x86_64-ubuntu-gcc
