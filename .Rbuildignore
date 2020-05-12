@@ -7,3 +7,4 @@
 ^\.github/workflows/pkgdown\.yaml$
 ^vignettes$
 ^\.deps$
+Dockerfilegw
