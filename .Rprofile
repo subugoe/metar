@@ -2,8 +2,14 @@ if (file.exists("~/.Rprofile") && interactive()) {
     source("~/.Rprofile") # always still source user .Rprofile
 }
 
+is_linux <- function() {
+    R.version$platform == "x86_64-pc-linux-gnu" &&
+        R.version$arch == "x86_64" &&
+        R.version$os == "linux-gnu"
+}
+
 set_rspm <- function(snapshot = "latest") {
-    if (R.version$platform == "x86_64-pc-linux-gnu" && R.version$arch == "x86_64" && R.version$os == "linux-gnu") {
+    if (is_linux()) {
         user_agent <- paste(
             getRversion(),
             R.version$platform,
