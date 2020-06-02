@@ -1,7 +1,7 @@
 Package: metaR
 Title: Internal package for SUB use
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     c(
       person(
         given = "Maximilian",
@@ -21,7 +21,7 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-Suggests: 
+Suggests:
     covr (>= 3.4.0),
     rcmdcheck (>= 1.3.3),
     fs (>= 1.3.2),
@@ -40,6 +40,6 @@ Suggests:
 URL: https://subugoe.github.io/metaR, https://github.com/subugoe/metaR
 BugReports: https://github.com/subugoe/metaR/issues
 RoxygenNote: 7.1.0
-Imports: 
+Imports:
     usethis (>= 1.5.1),
     tibble (>= 2.1.3)

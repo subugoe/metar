@@ -1,7 +1,4 @@
-repo:
-  url:
-    home: https://github.com/subugoe/metaR/
-    issue: https://github.com/subugoe/metaR/issues/
+url: http://subugoe.github.io/metaR
 authors:
   Maximilian Held:
     href: https://www.maxheld.de
@@ -14,15 +11,15 @@ template:
       api_key: ff1d71c7f0b22f4faf044c83aac493c2
       index_name: metar
 reference:
-- title: Project Management
-  desc: Functions to set up GitHub for project management
-- contents:
-  - has_concept("project management")
-- title: Setup helpers
-  desc: Functions to set up (package) development
-- contents:
-  - has_concept("setup helpers")
-- title: Corporate Identity
-  desc: Functions for the SUB corporate identity
-- contents:
-  - has_concept("corporate identity")
+  - title: Project Management
+    desc: Functions to set up GitHub for project management
+  - contents:
+      - has_concept("project management")
+  - title: Setup helpers
+    desc: Functions to set up (package) development
+  - contents:
+      - has_concept("setup helpers")
+  - title: Corporate Identity
+    desc: Functions for the SUB corporate identity
+  - contents:
+      - has_concept("corporate identity")
