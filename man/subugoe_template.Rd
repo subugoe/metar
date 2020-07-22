@@ -10,8 +10,8 @@ subugoe_template()
 A list of paths to assets and templates for web design.
 }
 \details{
-To use this template for website, list {metaR} in your \code{DESCRIPTION} and add to your \verb{_pkgdown.yml}:\if{html}{\out{<div class="yaml">}}\preformatted{template:
-  package: metaR
+To use this template for website, list {metar} in your \code{DESCRIPTION} and add to your \verb{_pkgdown.yml}:\if{html}{\out{<div class="yaml">}}\preformatted{template:
+  package: metar
 }\if{html}{\out{</div>}}
 
 As a result, your website will:
@@ -25,7 +25,7 @@ The colors were added and downloaded via https://www.bootstrap-live-customizer.c
 \item Add a custom footer including the wordmar.
 }
 
-To pull in changes in this package to your website, install the current version of {metaR} and re-run \code{pkgdown::build_site()} locally or in your CI.
+To pull in changes in this package to your website, install the current version of {metar} and re-run \code{pkgdown::build_site()} locally or in your CI.
 To pull in upstream changes from {pkgdown} into \emph{this} package, it may be ocassionally necessary to update the files in \code{inst/pkgdown/templates} which have been minimally adapted from their original counterparts in {pkgdown}.
 
 To learn more about pkgdown templates, read \href{https://pkgdown.r-lib.org/reference/build_site.html}{here} or consider \href{https://github.com/ropensci/rotemplate}{these} \href{https://tidytemplate.tidyverse.org}{examples}.

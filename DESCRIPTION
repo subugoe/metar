@@ -1,4 +1,4 @@
-Package: metaR
+Package: metar
 Title: Internal package for SUB use
 Version: 0.0.0.9000
 Authors@R:
@@ -34,8 +34,8 @@ Suggests:
     purrr (>= 0.3.4),
     magrittr (>= 1.5),
     scales (>= 1.1.0)
-URL: https://subugoe.github.io/metaR, https://github.com/subugoe/metaR
-BugReports: https://github.com/subugoe/metaR/issues
+URL: https://subugoe.github.io/metar, https://github.com/subugoe/metar
+BugReports: https://github.com/subugoe/metar/issues
 RoxygenNote: 7.1.1
 Remotes:
     subugoe/muggle@f60004c31979947dab53fbf9cfbb0e7f1c4bea55

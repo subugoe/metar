@@ -11,7 +11,7 @@ A list of three elements, all character vectors of hex color values, named by th
 \enumerate{
 \item \code{primary} colors,
 \item \code{secondary} colors and
-\item \code{facdeulty} for the colors of the different schools.
+\item \code{faculty} for the colors of the different schools.
 }
 }
 \description{

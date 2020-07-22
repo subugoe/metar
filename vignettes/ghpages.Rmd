@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(metaR)
+library(metar)
 library(magrittr)
 ```
 
@@ -32,7 +32,7 @@ You can also use [this GitHub Action](https://github.com/maxheld83/ghpages) to p
 
 ## Existing GitHub Pages Usage at SUB
 
-To potentially transition to a custom domain (see [#4](https://github.com/subugoe/metaR/issues/4)), we first need to know who would be affected by such a change.
+To potentially transition to a custom domain (see [#4](https://github.com/subugoe/metar/issues/4)), we first need to know who would be affected by such a change.
 (Notice though, that all old URLs would be forwarded automatically, so this is just out of an abundance of caution.)
 Here are all repos who currently have a GitHub Page (as defined a `200` status return).
 

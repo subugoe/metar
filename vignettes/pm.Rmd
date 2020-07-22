@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(metaR)
+library(metar)
 ```
 
 GitHub, though primarily a code repository, also has some lightweight project management features.
@@ -37,8 +37,8 @@ We held a related webinar on this topic on 2020-03-06.
 
 You can find the recorded version at:
 
-- `\\ug-sub-fs02.sub.uni-goettingen.de\share\metaR` (requires [VPN access](https://intranet.sub.uni-goettingen.de/pages/viewpage.action?pageId=118144269))
-- `owncloud.gwdg.de\metaR` (requires owncloud access)
+- `\\ug-sub-fs02.sub.uni-goettingen.de\share\metar` (requires [VPN access](https://intranet.sub.uni-goettingen.de/pages/viewpage.action?pageId=118144269))
+- `owncloud.gwdg.de\metar` (requires owncloud access)
 
 
 ## Getting Started
@@ -148,9 +148,9 @@ Issues should usually go inside the repo to which they pertain, and from which t
 
 There are some exceptions to this rule for issues without a clear place:
 
-1. https://github.com/subugoe/metaR also accepts issues around improving *how we work*.
+1. https://github.com/subugoe/metar also accepts issues around improving *how we work*.
     For example, an idea to enhance the reproducibility of reports may go here.
-    These issues may be "closeable" right within {metaR} by adopting some best practice, or they might require some work in another package or even a new package.
+    These issues may be "closeable" right within {metar} by adopting some best practice, or they might require some work in another package or even a new package.
 2. https://github.com/subugoe/scholcomm_analytics also accepts issues around *what we might work substantively*.
     For example, an idea for a new analysis can be logged here, though it may be done in its own repo, if commited to.
     There is not a really good reason to log these plans in the blog repo, except that this seems to be the going conventions.

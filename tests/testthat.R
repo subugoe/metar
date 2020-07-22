@@ -1,4 +1,4 @@
 library(testthat)
-library(metaR)
+library(metar)
 
-test_check("metaR")
+test_check("metar")
