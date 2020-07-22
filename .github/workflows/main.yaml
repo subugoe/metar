@@ -35,7 +35,7 @@ jobs:
       - uses: docker/build-push-action@v1
         name: Build Dev Image
         with:
-          repository: ${{ github.repository }}/metaR-dev
+          repository: ${{ github.repository }}/metar-dev
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
