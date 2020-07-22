@@ -6,7 +6,7 @@
 \alias{metaR-package}
 \title{metaR: Internal package for SUB use}
 \description{
-Best practices, settings and templates for #rstats work at SUB.
+Wrappers, settings and templates for #rstats work at SUB.
 }
 \seealso{
 Useful links:

@@ -39,5 +39,4 @@ vignettes/*.pdf
 .Renviron
 
 /docs
-inst/doc
-.vscode/vscode-R
+.vscode

@@ -1,20 +1,22 @@
 ---
 title: "Project Management"
-output: bookdown::html_document2
+author: "Max Held"
+date: "First published 2020-03, last updated `r Sys.Date()`"
+pkgdown:
+  as_is: true
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  echo = FALSE
+    collapse = TRUE,
+    comment = "#>",
+    echo = FALSE
 )
 ```
 
 ```{r setup}
 library(metaR)
 ```
-
 
 GitHub, though primarily a code repository, also has some lightweight project management features.
 
@@ -31,7 +33,7 @@ You can also use it partially, or only passively.
 
 ## Webinar
 
-We held a related webinar on 2020-03-06.
+We held a related webinar on this topic on 2020-03-06.
 
 You can find the recorded version at:
 
@@ -70,7 +72,7 @@ The rest of this document lays out some conventions of how we might be using Git
 ## Organisations and Teams
 
 GitHub knows individual and organisation accounts.
-Our organisation is https://github.com/subugoe, which we share with everyone using GitHub at SUB. 
+Our organisation is https://github.com/subugoe, which we share with everyone using GitHub at SUB.
 
 Inside the org account, there are (nested) teams.
 Teams make it easier to `@`-mention or manage privileges for a group of people at the same time.
@@ -127,7 +129,7 @@ knitr::kable(wag_labels())
 
 You can set these up in your own repo by once running `use_wag_labels()`.
 
-`needs-votes` is intended to gauge interest / worthiness of an idea *before* committing a lot of time to build it out. 
+`needs-votes` is intended to gauge interest / worthiness of an idea *before* committing a lot of time to build it out.
 If you have such an idea, just add the `needs-votes` label.
 You can see all current issues tagged `needs-votes` with the search query `label:needs-votes org:subugoe` using GitHub's [advanced search](https://help.github.com/en/github/searching-for-information-on-github/about-searching-on-github).
 You can also get an overview over all issues at https://github.com/issues.
@@ -137,19 +139,19 @@ We may also discuss these in person during weeklies or other meetings.
 `placeholder` is for work, which happens in, and is tracked in repositories outside of the `subugoe` org, such as an ropensci package.
 You might still want to track that work in a placeholder issue.
 
-To add more special labels, request it in an issue to this package or create a pull request. 
+To add more special labels, request it in an issue to this package or create a pull request.
 
 
 ### Special Repos
 
 Issues should usually go inside the repo to which they pertain, and from which they can (or could) be closed.
 
-There are two exceptions to this rule for issues without a clear place.
+There are some exceptions to this rule for issues without a clear place:
 
-- https://github.com/subugoe/metaR also accepts issues around improving *how we work*.
+1. https://github.com/subugoe/metaR also accepts issues around improving *how we work*.
     For example, an idea to enhance the reproducibility of reports may go here.
     These issues may be "closeable" right within {metaR} by adopting some best practice, or they might require some work in another package or even a new package.
-- https://github.com/subugoe/scholcomm_analytics also accepts issues around *what we might work substantively*.
+2. https://github.com/subugoe/scholcomm_analytics also accepts issues around *what we might work substantively*.
     For example, an idea for a new analysis can be logged here, though it may be done in its own repo, if commited to.
     There is not a really good reason to log these plans in the blog repo, except that this seems to be the going conventions.
     Arguably, new project ideas belong on this landing page, because if completed, the whole project would be listed here.

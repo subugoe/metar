@@ -3,8 +3,11 @@
 \name{subugoe_template}
 \alias{subugoe_template}
 \title{State- and University Library of Göttingen \href{http://pkgdown.r-lib.org}{pkgdown} template}
+\usage{
+subugoe_template()
+}
 \description{
-State- and University Library of Göttingen \href{http://pkgdown.r-lib.org}{pkgdown} template
+A list of paths to assets and templates for web design.
 }
 \details{
 To use this template for website, list {metaR} in your \code{DESCRIPTION} and add to your \verb{_pkgdown.yml}:\if{html}{\out{<div class="yaml">}}\preformatted{template:

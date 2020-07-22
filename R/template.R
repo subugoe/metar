@@ -1,6 +1,6 @@
 #' State- and University Library of Göttingen [pkgdown](http://pkgdown.r-lib.org) template
 #'
-#' @name subugoe_template
+#' A list of paths to assets and templates for web design.
 #'
 #' @details
 #' To use this template for website, list {metaR} in your `DESCRIPTION` and add to your `_pkgdown.yml`:
@@ -26,4 +26,18 @@
 #' To learn more about pkgdown templates, read [here](https://pkgdown.r-lib.org/reference/build_site.html) or consider [these](https://github.com/ropensci/rotemplate) [examples](https://tidytemplate.tidyverse.org).
 #'
 #' @family corporate identity
-NULL
+subugoe_template <- function() {
+  path_root <- system.file("pkgdown", package = "metaR")
+  list(
+    assets = list(
+      css = fs::path(path_root, "assets", "ugoe_bootswatch.css"),
+      logo = fs::path(path_root, "assets", "sub_logo.svg"),
+      wordmark = fs::path(path_root, "assets", "sub_workdmark.jpg")
+    ),
+    templates = list(
+      footer = fs::path(path_root, "templates", "footer.html"),
+      head = fs::path(path_root, "templates", "head.html"),
+      navbar = fs::path(path_root, "templates", "navbar.html")
+    )
+  )
+}

@@ -1,6 +1,9 @@
 ---
-title: "GitHub Pages"
-output: bookdown::html_document2
+title: "Usage of GitHub Pages at SUB"
+author: "Max Held"
+date: "First published 2020-03, last updated `r Sys.Date()`"
+pkgdown:
+  as_is: true
 ---
 
 ```{r, include = FALSE}
@@ -15,26 +18,30 @@ library(metaR)
 library(magrittr)
 ```
 
+## Motivation
+
 [GitHub Pages](https://pages.github.com) lets you serve static websites (HTML5, CSS, JS) right from GitHub.
 That can be convenient to publish research results or documentation.
 
 You just need to push your assets to a branch named `gh-pages` or a `docs/` folder on `master`.
 The website for, say, project `foo` is then available to the world at `https://subugoe.github.io/foo`.
 
+To learn more about publishing results of your R project to GitHub Pages, see [muggle](http://subugoe.github.io/muggle/).
+You can also use [this GitHub Action](https://github.com/maxheld83/ghpages) to publish arbitrary assets to GitHub Pages.
 
-## Existing GitHub Pages
+
+## Existing GitHub Pages Usage at SUB
 
 To potentially transition to a custom domain (see [#4](https://github.com/subugoe/metaR/issues/4)), we first need to know who would be affected by such a change.
 (Notice though, that all old URLs would be forwarded automatically, so this is just out of an abundance of caution.)
 Here are all repos who currently have a GitHub Page (as defined a `200` status return).
-For each of those repos, 
 
 ```{r}
 repos <- gh::gh(
-  endpoint = "GET /users/:username/repos", 
-  username = "subugoe", 
+  endpoint = "GET /users/:username/repos",
+  username = "subugoe",
   .limit = Inf
-) %>% 
+) %>%
   purrr::map_dfr(
     .f = function(x) {
       name <- x$name
@@ -47,8 +54,8 @@ repos <- gh::gh(
     },
     .id = NULL
   )
-repos %>% 
-  dplyr::filter(has_ghpages == TRUE) %>% 
+repos %>%
+  dplyr::filter(has_ghpages == TRUE) %>%
   knitr::kable()
 
 # can't get collaborators via API b/c that would require push access to all repos
@@ -56,4 +63,3 @@ repos %>%
 # committers are possible, but are a bad source, b/c they include lots of outside contributors
 # gh::gh("GET /repos/:owner/:repo/commits", owner = "subugoe", repo = "2019-11-12-ugoe-carpentries", .limit = Inf)
 ```
-

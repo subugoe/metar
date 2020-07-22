@@ -1,10 +1,9 @@
-^metaR\.Rproj$
-^\.Rproj\.user$
 ^codecov\.yml$
-^\.github/workflows/main\.yaml$
+^\.github
 ^docs$
 ^pkgdown$
-^\.github/workflows/pkgdown\.yaml$
 ^vignettes$
-^\.deps$
-Dockerfilegw
+Dockerfile
+.vscode
+[.]code-workspace$
+[.]Rproj$

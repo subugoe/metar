@@ -11,7 +11,7 @@ A list of three elements, all character vectors of hex color values, named by th
 \enumerate{
 \item \code{primary} colors,
 \item \code{secondary} colors and
-\item \code{faculty} for the colors of the different schools.
+\item \code{facdeulty} for the colors of the different schools.
 }
 }
 \description{
@@ -24,6 +24,6 @@ purrr::walk(.x = ugoe_pal(), .f = scales::show_col)
 \seealso{
 Other corporate identity: 
 \code{\link{ejd_pal}()},
-\code{\link{subugoe_template}}
+\code{\link{subugoe_template}()}
 }
 \concept{corporate identity}
