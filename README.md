@@ -8,7 +8,6 @@
 <!-- badges: end -->
 
 This package is for internal use at [SUB Göttingen](http://sub.uni-goettingen.de).
-It is about how we work.
 
 <div class="alert alert-info">
   All of these are suggestions only and should never get in the way of how people prefer to work.
