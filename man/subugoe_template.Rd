@@ -6,8 +6,11 @@
 \usage{
 subugoe_template()
 }
+\value{
+named list of paths to assets and templates for web design
+}
 \description{
-A list of paths to assets and templates for web design.
+State- and University Library of Göttingen \href{http://pkgdown.r-lib.org}{pkgdown} template
 }
 \details{
 To use this template for website, list {metar} in your \code{DESCRIPTION} and add to your \verb{_pkgdown.yml}:\if{html}{\out{<div class="yaml">}}\preformatted{template:

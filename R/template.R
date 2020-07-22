@@ -1,7 +1,5 @@
 #' State- and University Library of Göttingen [pkgdown](http://pkgdown.r-lib.org) template
 #'
-#' A list of paths to assets and templates for web design.
-#'
 #' @details
 #' To use this template for website, list {metar} in your `DESCRIPTION` and add to your `_pkgdown.yml`:
 #'
@@ -25,7 +23,11 @@
 #'
 #' To learn more about pkgdown templates, read [here](https://pkgdown.r-lib.org/reference/build_site.html) or consider [these](https://github.com/ropensci/rotemplate) [examples](https://tidytemplate.tidyverse.org).
 #'
+#' @return named list of paths to assets and templates for web design
+#'
 #' @family corporate identity
+#'
+#' @export
 subugoe_template <- function() {
   path_root <- system.file("pkgdown", package = "metar")
   list(
