@@ -1,1 +1,1 @@
-FROM subugoe/muggle-onbuild:7ccc2a01851e52639e5d0ab7127af63df1967b7a
+FROM subugoe/muggle-onbuild:2e75e10fc82b4c5cad586c6b6fef8b23d1b0ff04
