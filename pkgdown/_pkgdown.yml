@@ -1,3 +1,4 @@
+url: https://subugoe.github.io/metar/
 authors:
   Maximilian Held:
     href: https://www.maxheld.de
@@ -18,7 +19,7 @@ reference:
     desc: Functions to set up (package) development
   - contents:
       - has_concept("setup helpers")
-  - title: Corporate Identity
-    desc: Functions for the SUB corporate identity
+  - title: Reexports
+    desc: Objects exported from other packages
   - contents:
-      - has_concept("corporate identity")
+      - reexports
