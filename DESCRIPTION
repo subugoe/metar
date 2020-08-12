@@ -38,4 +38,4 @@ BugReports: https://github.com/subugoe/metar/issues
 RoxygenNote: 7.1.1
 Remotes:
     subugoe/muggle@a852008fab46173103ad633899994ee7296e7b89,
-    subugoe/subugoetheme@1.0
+    subugoe/subugoetheme@1.0.0
