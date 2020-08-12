@@ -9,7 +9,7 @@ jobs:
         shell: Rscript {0}
     container:
       # this needs to be the same as in Dockerfile
-      image: subugoe/muggle-onbuild:2e75e10fc82b4c5cad586c6b6fef8b23d1b0ff04
+      image: subugoe/muggle-buildtime-onbuild:a852008fab46173103ad633899994ee7296e7b89
     steps:
       - uses: actions/checkout@v2
       - name: Cache R Packages
@@ -23,19 +23,19 @@ jobs:
       - name: Install R Dependencies
         env:
           # see builder.Dockerfile for explanation, this resets after this step
-          R_LIBS_SITE: $R_LIBS_APP_GH
+          R_LIBS_SITE: $R_LIBS_RUNTIME_GH
         run: remotes::install_deps(dependencies = TRUE)
       - name: Check
         run: muggle::rcmdcheck2()
       - name: Test Coverage
         run: covr::codecov()
       - name: Build Package Website
-        run: |
-          pkgdown::build_site(override = list(new_process = FALSE))
-      - uses: docker/build-push-action@v1
-        name: Build Dev Image
+        run: pkgdown::build_site(override = list(new_process = FALSE))
+      - name: Build Buildtime Image
+        uses: docker/build-push-action@v1
         with:
-          repository: ${{ github.repository }}/metar-dev
+          repository: ${{ github.repository }}/metar-buildtime
+          target: buildtime
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
