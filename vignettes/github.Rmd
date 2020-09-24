@@ -1,0 +1,80 @@
+---
+title: "Why We Use GitHub (at WAG)"
+author: "Max Held"
+date: "First published 2020-09, last updated `r Sys.Date()`"
+pkgdown:
+  as_is: true
+---
+
+The staff unit "Wissen als Gemeingut" (WAG, english 'Knowlege as a Commons') uses [GitHub.com](https://github.com) as a git host for source control management (SCM), [project management](https://subugoe.github.io/metar/articles/pm.html), [webhosting](https://subugoe.github.io/metar/articles/pm.html) and DevOps (CI/CD, container registry and more).
+
+For our relatively small team, to focus on our mission, we need to minimize friction and standardise as much as possible on *one* platform for the entire data analytics stack.
+In choosing such a platform, we evaluated GitHub.com and the [GWDG-hosted gitlab.gwdg.de instance](https://info.gwdg.de/docs/doku.php?id=de:services:email_collaboration:gitlab:start).
+GitHub.com won out because if offered (in this order) beneficial network effects, a superior feature set and limited additional lock-in potential.
+
+
+## Network Effects
+
+GitHub.com is widely used in R open source development in general, and the bibliometric data analysis community in particular.
+We often depend on and link to repositories and issues in other R projects, which is easily possible inside of GitHub.com.
+We also occassionally receive tickets or pull requests from external contributors, whom we could not easily, or at all, accomodate on gitlab.gwdg.de.
+Maintaining a separate development platform, with seperate usernames and issues as well as slightly different paradigms would add undue friction.
+
+As a corollary of these network effects, existing software for R DevOps is more readily available for GitHub (for example, the [`r-lib/actions`](https://github.com/r-lib/actions) repo) and some features in [{usethis}](http://usethis.r-lib.org).
+Setting up GitLab to meet similar standards would take significant resources and may not be as well-supported by the community and commercial open source developers in the R community (RStudio, PBC)
+
+
+## Feature Set
+
+GitHub.com and (self-hosted) GitLab generally offer many of the same features, though GitLab has a history of covering the Software Development Life Cycle (SDLC) in more depth and breadth.
+
+gitlab.gwdg.de is the self-hosted Enterprise Edition (EE) of Gitlab apparently with a Starter License (?).
+
+Features which, at first sight, appear to be missing from gitlab.gwdg.de are:
+
+1. Workflow Automation / CI/CD with crossplatform runtimes (macOS, Windows, Linux) as well as Docker Container.
+    The GWDG [notes](https://info.gwdg.de/faq/index.php?action=artikel&cat=57&id=274&artlang=de) that the Docker Daemon is not available inside its runners.
+    Furthermore, I could not find documentation on these runners, and they are likely to support only Linux.
+    Setting up our own custom runners would be cost a considerable amount of time.
+
+Since our repositories are all public, the [free GitHub.com tier](https://github.com/pricing) includes all needed features (though the actual subscription for github.com/subugoe is unknown).
+
+
+## Limited Additional Lock-In
+
+Both GitHub.com and (self-hosted) GitLab are, in part, proprietary software and present a risk for lock-in.
+However, the core deliverable of our data analyses lies in our R software and the containers to develop and deploy them in.
+
+Both GitHub *and* GitLab constitute relatively thin layers on top of these core products:
+- some configuration files (such as the `*.yaml`s for the workflow automation)
+- limited reliance on the workflow runner environments (mostly environment variables in GitHub Actions)
+- project management (issues, milestones, etc.)
+
+In addition, the community benefits on GitHub present a significant source of lock-in:
+On GitLab we would have to retool with limited community support, and probably loose external contributors.
+These downsides of leaving GitHub, however, are a *fait accompli* -- our decision to stay on GitHub will not increase the costs of a potential later migration.
+
+Staying on GitHub, then, does not *further* limit our future strategic choices.
+We should therefore stay on GitHub for the foreseeable future and absorb the one-off cost of leaving only when and if it becomes necessary.
+
+
+## Philosophical Reasons
+
+Our mission is to produce bibliometric analyses, and to do so in a way that facilitates open science, such as using and producing open source software *in our data products*.
+But this mission does not prejudice our choice of tools *outside* of, or *adjacent* to these data products, as, in this case, the SDLC solution.
+Whether, for example, our tickets are tracked in a hosted or self-hosted, proprietary or open-source software is largely irrelevant to our mission, *if* our choosen platform allows us (and people outside of SUB) to collaborate with us in an open way.
+In fact, any *additional* costs that arise from our choice of tooling *should* be justified narrowly in terms of our mission -- and not a general preference for open source (or self-hosted) software, desireable as that may be (or not).
+
+As an extreme, but illustrative example, our mission does not require us to use *fully* open-source hardware in our development (of which there is very [little](https://ryf.fsf.org)), because how open or closed the computer on which our data products are developed has no bearing on the open source nature of the *result*.
+(This is why we standardise our CI/CD on a [fully open and reproducible docker image](https://github.com/subugoe/muggle)).
+In fact, insisting on such a time-intensive standard would be wasteful and distract from our mission.
+
+GitHub.com, hosted and proprietary though it may be, does not negatively affect the open source nature of our data products.
+Because it lowers the friction for collaboration, it might make our work more open.
+
+GitHub.com then, for now, fits the bill.
+
+
+## Compliance
+
+As many other vendors, GitHub.com [offers](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/entering-a-data-protection-agreement-with-github-for-gdpr-compliance) a customary data protection agreement for General Data Protection Regulation (GDPR) compliance (~ Auftragsverarbeitung).
